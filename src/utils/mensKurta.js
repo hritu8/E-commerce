@@ -7,7 +7,7 @@ export const mens_kurta = [
     color: "Green",
     discountedPrice: 499,
     price: 1499,
-    discountPersent: 66,
+    discountpercent: 66,
     size: [
       {
         name: "S",
@@ -37,7 +37,7 @@ export const mens_kurta = [
     color: "Yellow",
     discountedPrice: 799,
     price: 2499,
-    discountPersent: 68,
+    discountpercent: 68,
     size: [
       {
         name: "S",
@@ -67,7 +67,7 @@ export const mens_kurta = [
     color: "Blue",
     discountedPrice: 399,
     price: 1499,
-    discountPersent: 73,
+    discountpercent: 73,
     size: [
       {
         name: "S",
@@ -97,7 +97,7 @@ export const mens_kurta = [
     color: "White",
     discountedPrice: 474,
     price: 1999,
-    discountPersent: 76,
+    discountpercent: 76,
     size: [
       {
         name: "S",
@@ -127,7 +127,7 @@ export const mens_kurta = [
     color: "Grey",
     discountedPrice: 524,
     price: 1049,
-    discountPersent: 50,
+    discountpercent: 50,
     size: [
       {
         name: "S",
@@ -157,7 +157,7 @@ export const mens_kurta = [
     color: "Pink",
     discountedPrice: 499,
     price: 1499,
-    discountPersent: 66,
+    discountpercent: 66,
     size: [
       {
         name: "S",
@@ -187,7 +187,7 @@ export const mens_kurta = [
     color: "Black",
     discountedPrice: 277,
     price: 999,
-    discountPersent: 72,
+    discountpercent: 72,
     size: [
       {
         name: "S",
@@ -217,7 +217,7 @@ export const mens_kurta = [
     color: "Blue",
     discountedPrice: 765,
     price: 1049,
-    discountPersent: 27,
+    discountpercent: 27,
     size: [
       {
         name: "S",
@@ -247,7 +247,7 @@ export const mens_kurta = [
     color: "Green",
     discountedPrice: 499,
     price: 1599,
-    discountPersent: 68,
+    discountpercent: 68,
     size: [
       {
         name: "S",
@@ -277,7 +277,7 @@ export const mens_kurta = [
     color: "Yellow",
     discountedPrice: 429,
     price: 999,
-    discountPersent: 57,
+    discountpercent: 57,
     size: [
       {
         name: "S",
@@ -307,7 +307,7 @@ export const mens_kurta = [
     color: "Light Blue",
     discountedPrice: 729,
     price: 909,
-    discountPersent: 27,
+    discountpercent: 27,
     size: [
       {
         name: "S",
@@ -337,7 +337,7 @@ export const mens_kurta = [
     color: "Green",
     discountedPrice: 449,
     price: 1749,
-    discountPersent: 74,
+    discountpercent: 74,
     size: [
       {
         name: "S",
@@ -367,7 +367,7 @@ export const mens_kurta = [
     color: "Dark Blue",
     discountedPrice: 449,
     price: 1499,
-    discountPersent: 70,
+    discountpercent: 70,
     size: [
       {
         name: "S",
@@ -397,7 +397,7 @@ export const mens_kurta = [
     color: "Yellow",
     discountedPrice: 385,
     price: 1299,
-    discountPersent: 70,
+    discountpercent: 70,
     size: [
       {
         name: "S",
@@ -427,7 +427,7 @@ export const mens_kurta = [
     color: "Orange",
     discountedPrice: 395,
     price: 1495,
-    discountPersent: 73,
+    discountpercent: 73,
     size: [
       {
         name: "S",
@@ -457,7 +457,7 @@ export const mens_kurta = [
     color: "Dark Blue",
     discountedPrice: 399,
     price: 1648,
-    discountPersent: 75,
+    discountpercent: 75,
     size: [
       {
         name: "S",
@@ -487,7 +487,7 @@ export const mens_kurta = [
     color: "White",
     discountedPrice: 599,
     price: 2499,
-    discountPersent: 76,
+    discountpercent: 76,
     size: [
       {
         name: "S",
@@ -517,7 +517,7 @@ export const mens_kurta = [
     color: "White",
     discountedPrice: 629,
     price: 2499,
-    discountPersent: 74,
+    discountpercent: 74,
     size: [
       {
         name: "S",
@@ -547,7 +547,7 @@ export const mens_kurta = [
     color: "White",
     discountedPrice: 370,
     price: 1499,
-    discountPersent: 75,
+    discountpercent: 75,
     size: [
       {
         name: "S",
@@ -577,7 +577,7 @@ export const mens_kurta = [
     color: "Yellow",
     discountedPrice: 363,
     price: 1499,
-    discountPersent: 75,
+    discountpercent: 75,
     size: [
       {
         name: "S",
@@ -607,7 +607,7 @@ export const mens_kurta = [
     color: "Beige",
     discountedPrice: 629,
     price: 2499,
-    discountPersent: 74,
+    discountpercent: 74,
     size: [
       {
         name: "S",
@@ -637,7 +637,7 @@ export const mens_kurta = [
     color: "Light Blue",
     discountedPrice: 629,
     price: 2499,
-    discountPersent: 74,
+    discountpercent: 74,
     size: [
       {
         name: "S",
@@ -667,7 +667,7 @@ export const mens_kurta = [
     color: "Purple",
     discountedPrice: 399,
     price: 1648,
-    discountPersent: 75,
+    discountpercent: 75,
     size: [
       {
         name: "S",
@@ -697,7 +697,7 @@ export const mens_kurta = [
     color: "Pink",
     discountedPrice: 499,
     price: 1499,
-    discountPersent: 66,
+    discountpercent: 66,
     size: [
       {
         name: "S",
@@ -727,7 +727,7 @@ export const mens_kurta = [
     color: "Yellow",
     discountedPrice: 265,
     price: 1499,
-    discountPersent: 82,
+    discountpercent: 82,
     size: [
       {
         name: "S",
@@ -757,7 +757,7 @@ export const mens_kurta = [
     color: "Blue",
     discountedPrice: 483,
     price: 1999,
-    discountPersent: 75,
+    discountpercent: 75,
     size: [
       {
         name: "S",
@@ -787,7 +787,7 @@ export const mens_kurta = [
     color: "Light Green",
     discountedPrice: 499,
     price: 1499,
-    discountPersent: 66,
+    discountpercent: 66,
     size: [
       {
         name: "S",
@@ -817,7 +817,7 @@ export const mens_kurta = [
     color: "Orange",
     discountedPrice: 499,
     price: 1499,
-    discountPersent: 66,
+    discountpercent: 66,
     size: [
       {
         name: "S",
@@ -847,7 +847,7 @@ export const mens_kurta = [
     color: "Maroon",
     discountedPrice: 399,
     price: 1648,
-    discountPersent: 75,
+    discountpercent: 75,
     size: [
       {
         name: "S",
@@ -877,7 +877,7 @@ export const mens_kurta = [
     color: "Pink",
     discountedPrice: 449,
     price: 1749,
-    discountPersent: 74,
+    discountpercent: 74,
     size: [
       {
         name: "S",
@@ -907,7 +907,7 @@ export const mens_kurta = [
     color: "Dark Blue",
     discountedPrice: 468,
     price: 1599,
-    discountPersent: 70,
+    discountpercent: 70,
     size: [
       {
         name: "S",
@@ -937,7 +937,7 @@ export const mens_kurta = [
     color: "Dark Blue",
     discountedPrice: 499,
     price: 1749,
-    discountPersent: 71,
+    discountpercent: 71,
     size: [
       {
         name: "S",
@@ -967,7 +967,7 @@ export const mens_kurta = [
     color: "Yellow",
     discountedPrice: 467,
     price: 2199,
-    discountPersent: 78,
+    discountpercent: 78,
     size: [
       {
         name: "S",
@@ -997,7 +997,7 @@ export const mens_kurta = [
     color: "Gold",
     discountedPrice: 810,
     price: 2499,
-    discountPersent: 67,
+    discountpercent: 67,
     size: [
       {
         name: "S",
@@ -1027,7 +1027,7 @@ export const mens_kurta = [
     color: "Maroon",
     discountedPrice: 478,
     price: 1279,
-    discountPersent: 62,
+    discountpercent: 62,
     size: [
       {
         name: "S",
@@ -1057,7 +1057,7 @@ export const mens_kurta = [
     color: "Black",
     discountedPrice: 399,
     price: 1648,
-    discountPersent: 75,
+    discountpercent: 75,
     size: [
       {
         name: "S",
@@ -1087,7 +1087,7 @@ export const mens_kurta = [
     color: "Orange",
     discountedPrice: 948,
     price: 1299,
-    discountPersent: 27,
+    discountpercent: 27,
     size: [
       {
         name: "S",
@@ -1117,7 +1117,7 @@ export const mens_kurta = [
     color: "Multicolor",
     discountedPrice: 994,
     price: 2499,
-    discountPersent: 60,
+    discountpercent: 60,
     size: [
       {
         name: "S",
@@ -1147,7 +1147,7 @@ export const mens_kurta = [
     color: "Pink",
     discountedPrice: 362,
     price: 1499,
-    discountPersent: 75,
+    discountpercent: 75,
     size: [
       {
         name: "S",
@@ -1177,7 +1177,7 @@ export const mens_kurta = [
     color: "White",
     discountedPrice: 393,
     price: 1599,
-    discountPersent: 75,
+    discountpercent: 75,
     size: [
       {
         name: "S",
