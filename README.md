@@ -6,3 +6,4 @@
 - Navigation and navigation data
 - Product page (photo ,description) using tailwind
 - Product  review and ratings using mui
+- product completed
