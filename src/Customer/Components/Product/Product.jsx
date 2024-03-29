@@ -366,8 +366,8 @@ export default function Product() {
                                   {section.options.map((option, optionIdx) => (
                                     <>
                                       <FormControlLabel
-                                        onChange={(e)=>{
-                                            handleRadioFilter(e, section.id)
+                                        onChange={(e) => {
+                                          handleRadioFilter(e, section.id);
                                         }}
                                         value={option.value}
                                         control={<Radio />}
@@ -389,7 +389,7 @@ export default function Product() {
               <div className="lg:col-span-4 w-full">
                 <div className="flex flex-wrap justify-center bg-white py-5">
                   {mens_kurta.map((item) => (
-                    <ProductCard data={item} />
+                    <ProductCard product={item} />
                   ))}
                 </div>
               </div>

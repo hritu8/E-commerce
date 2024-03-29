@@ -10,3 +10,9 @@
 - cart 
 - Checkout
 - AddressCard
+- Order page
+- route for pages
+ 
+---- Frontend ----/////
+
+---- Backend  starts----
