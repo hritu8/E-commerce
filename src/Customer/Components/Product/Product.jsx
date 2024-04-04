@@ -20,8 +20,11 @@ import {
 } from "@mui/material";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { findProducts } from "../../../stateRedux/Product/Action";
-import { useDispatch } from "react-redux";
+import {
+  fetchAllProducts,
+  findProducts,
+} from "../../../stateRedux/Product/Action";
+import { useDispatch, useSelector } from "react-redux";
 
 const sortOptions = [
   { name: "Price: Low to High", href: "#", current: false },
@@ -38,6 +41,8 @@ export default function Product() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const params = useParams();
+  const { product } = useSelector((store) => store);
+  console.log("product store", product);
 
   const decodedQueryString = decodeURIComponent(location.search);
   const searchParams = new URLSearchParams(decodedQueryString);
@@ -80,6 +85,10 @@ export default function Product() {
     navigate({ search: `?${query}` });
   };
 
+  // useEffect(() => {
+  //   dispatch(fetchAllProducts());
+  // }, [dispatch]);
+
   useEffect(() => {
     const [minPrice, maxPrice] =
       priceValue === null ? [0, 0] : priceValue.split("-").map(Number);
@@ -95,6 +104,7 @@ export default function Product() {
       pageSize: 10,
       stock: stock,
     };
+    console.log("data hai ", data);
     dispatch(findProducts(data));
   }, [
     params.levelThree,
@@ -429,7 +439,7 @@ export default function Product() {
               {/* Product grid */}
               <div className="lg:col-span-4 w-full">
                 <div className="flex flex-wrap justify-center bg-white py-5">
-                  {mens_kurta.map((item) => (
+                  {product.products?.content?.map((item) => (
                     <ProductCard product={item} />
                   ))}
                 </div>

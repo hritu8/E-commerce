@@ -3,6 +3,16 @@ import "./ProductCard.css";
 import { useNavigate } from "react-router-dom";
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
+  const {
+    title,
+    brand,
+    imageUrl,
+    price,
+    discountedPrice,
+    color,
+    discountPercent,
+  } = product;
+
   return (
     <div
       onClick={() => navigate(`/product/${5}`)}
@@ -11,22 +21,20 @@ const ProductCard = ({ product }) => {
       <div className="h-[20rem]">
         <img
           className="w-full h-full  object-cover object-left-top "
-          src={product.imageUrl}
+          src={imageUrl}
           alt="tshirt"
         />
       </div>
 
       <div>
         <div className="textPart bg-white p-3">
-          <p className="font-bold opacity-60">{product.brand}</p>
-          <p>{product.title}</p>
+          <p className="font-bold opacity-60">{brand}</p>
+          <p>{title}</p>
         </div>
         <div className="flex items-center space-x-2">
-          <p className="font-semibold">₹{product.discountedPrice}</p>
-          <p className="line-through opacity-50">{product.price}</p>
-          <p className="text-green-600 font-semibold">
-            {product.discountpercent}% off
-          </p>
+          <p className="font-semibold">₹{discountedPrice}</p>
+          <p className="line-through opacity-50">{price}</p>
+          <p className="text-green-600 font-semibold">{discountPercent}% off</p>
         </div>
       </div>
     </div>

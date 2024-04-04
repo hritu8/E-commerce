@@ -6,7 +6,7 @@ import {
   combineReducers,
 } from "@reduxjs/toolkit";
 import { thunk } from "redux-thunk";
-import { customerProductReducer } from "./Product/Reducers";
+import customerProductReducer from "./Product/Reducers";
 import { cartReducer } from "./Cart/Reducer";
 import { orderReducer } from "./Order/Reducer";
 

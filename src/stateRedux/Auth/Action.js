@@ -23,13 +23,10 @@ export const register = (userData) => async (dispatch) => {
   dispatch(registerRequest());
   try {
     const response = await axios.post(`${API_BASE_URL}/auth/signup`, userData);
-    console.log("response hai", response);
     const user = response.data;
-    console.log("jwt", user.jwt);
     if (user.jwt) {
       localStorage.setItem("jwt", user.jwt);
     }
-    console.log("user", user);
     dispatch(registerSuccess(user));
   } catch (error) {
     dispatch(registerFailure(error.message));
@@ -68,7 +65,7 @@ export const getUser = (jwt) => async (dispatch) => {
       },
     });
     const user = response.data;
-    console.log(user);
+    console.log("user hai",user);
     dispatch(getUserSuccess(user));
   } catch (error) {
     dispatch(getUserFailure(error.message));
