@@ -27,7 +27,6 @@ const RegisterForm = () => {
       email: data.get("email"),
       password: data.get("password"),
     };
-    console.log("userData hai", userData);
     dispatch(register(userData));
     navigate("/");
   };

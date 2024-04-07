@@ -23,7 +23,7 @@ export default function Navigation() {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
   const location = useLocation();
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const jwt = localStorage.getItem("jwt");
   const { auth } = useSelector((store) => store);
 

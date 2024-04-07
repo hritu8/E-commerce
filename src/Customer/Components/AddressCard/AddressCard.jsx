@@ -1,12 +1,16 @@
-const AddressCard = () => {
+const AddressCard = ({ address }) => {
   return (
     <div className="">
       <div className="space-y-3">
-        <p className="font-semibold">Ram Kapoor</p>
-        <p>Mumbai, Gokul Dham ,400001</p>
+        <p className="font-semibold">
+          {address?.firstName + " " + address?.lastName}
+        </p>
+        <p>
+          {address?.state},{address?.streetAddress} ,{address?.zipCode}
+        </p>
         <div className="space-y-1">
           <p className="font-semibold">Phone Number</p>
-          <p>987564564</p>
+          <p>{address?.mobile}</p>
         </div>
       </div>
     </div>

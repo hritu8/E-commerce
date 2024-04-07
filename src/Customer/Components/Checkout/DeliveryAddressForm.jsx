@@ -1,23 +1,36 @@
 import { Box, Button, Grid, TextField } from "@mui/material";
 import React from "react";
 import AddressCard from "../AddressCard/AddressCard";
+import { useDispatch, useSelector } from "react-redux";
+import { createOrder } from "../../../stateRedux/Order/Action";
+import { useNavigate } from "react-router-dom";
 
 const DeliveryAddressForm = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { order } = useSelector((store) => store);
+  const { auth } = useSelector((store) => store);
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevents the default form submission behavior
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    // eslint-disable-next-line no-console
 
-    // Access form data from event.target
-    const formData = new FormData(event.target);
+    const address = {
+      firstName: data.get("firstName"),
+      lastName: data.get("lastName"),
+      streetAddress: data.get("address"),
+      city: data.get("city"),
+      state: data.get("state"),
+      zipCode: data.get("zip"),
+      mobile: data.get("phoneNumber"),
+    };
 
-    // Create an object to store form data
-    const data = {};
-    formData.forEach((value, key) => {
-      data[key] = value;
-    });
+    const orderData = { address, navigate };
+   
+    dispatch(createOrder(orderData));
 
     // Print form data to console (optional)
-    console.log("Form Data:", data);
-
+   
     // Here, you can perform any further processing with the form data, such as sending it to a server
 
     // Clear the form fields (optional)
@@ -32,7 +45,10 @@ const DeliveryAddressForm = () => {
           className="border rounded-e-md shadow-md h-[30.5rem] overflow-y-scroll"
         >
           <div className="p-5 py-7 border-b cursor-pointer">
-            <AddressCard />
+            {auth.user?.address?.map((item) => (
+              <AddressCard address={item} />
+            ))}
+
             <Button
               sx={{ mt: 2, bgcolor: "RGB(145 85 253)" }}
               size="large"
@@ -70,7 +86,7 @@ const DeliveryAddressForm = () => {
                   <TextField
                     required
                     id="address"
-                    name="adddress"
+                    name="address"
                     label="Address"
                     fullWidth
                     autoComplete="given-name"
@@ -102,7 +118,7 @@ const DeliveryAddressForm = () => {
                   <TextField
                     required
                     id="zip"
-                    name="zipCode"
+                    name="zip"
                     label="Zip/Postal Code"
                     fullWidth
                     autoComplete="shipping postal-code"
@@ -111,9 +127,9 @@ const DeliveryAddressForm = () => {
                 <Grid item xs={12} sm={6}>
                   <TextField
                     required
-                    id="phonenumber"
-                    name="phonenumber"
-                    label="Phonenumber"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    label="PhoneNumber"
                     fullWidth
                     autoComplete="number"
                   ></TextField>

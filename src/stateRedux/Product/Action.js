@@ -47,13 +47,13 @@ export const findProducts = (reqData) => async (dispatch) => {
       `${API_BASE_URL}/api/products?category=${category}&color=${colors}&sizes=${sizes}&minPrice=${minPrice}&maxPrice=${maxPrice}&discountPercent=${minDiscount}&stock=${stock}&sort=${sort}&pageNumber=${pageNumber}&pageSize=${pageSize}`
     );
 
-    console.log("product data", data);
+   
     dispatch({
       type: FIND_PRODUCTS_BY_CATEGORY_SUCCESS,
       payload: data,
     });
   } catch (error) {
-    console.log("catch error");
+   
     dispatch({
       type: FIND_PRODUCTS_BY_CATEGORY_FAILURE,
       payload: error.message,
@@ -65,7 +65,7 @@ export const findProductsById = (reqData) => async (dispatch) => {
   dispatch({ type: FIND_PRODUCT_BY_ID_REQUEST });
   const { productId } = reqData;
   try {
-    const { data } = await api.get(`/products/id/${productId}`);
+    const { data } = await api.get(`/api/products/id/${productId}`);
     dispatch({
       type: FIND_PRODUCT_BY_ID_SUCCESS,
       payload: data,

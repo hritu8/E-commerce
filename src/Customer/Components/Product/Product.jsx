@@ -1,4 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
+import Pagination from "@mui/material/Pagination";
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import {
@@ -41,8 +42,7 @@ export default function Product() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const params = useParams();
-  const { product } = useSelector((store) => store);
-  console.log("product store", product);
+  const { products } = useSelector((store) => store);
 
   const decodedQueryString = decodeURIComponent(location.search);
   const searchParams = new URLSearchParams(decodedQueryString);
@@ -54,20 +54,26 @@ export default function Product() {
   const pageNumber = searchParams.get("page");
   const stock = searchParams.get("stock");
 
+  const handlePaginationChange = (event, value) => {
+    const searchParams = new URLSearchParams(location.search);
+
+    searchParams.set("page", value);
+    const query = searchParams.toString();
+    navigate({ search: `${query}` });
+  };
+
   const handleFilter = (value, sectionId) => {
     const searchParams = new URLSearchParams(location.search);
     // console.log("searchParams", searchParams);
     let filterValue = searchParams.getAll(sectionId);
     // console.log("value :", value, " sectionId :", sectionId);
-    console.log(filterValue);
+
     if (filterValue.length > 0 && filterValue[0].split(",").includes(value)) {
       filterValue = filterValue[0].split(",").filter((item) => item !== value);
 
       if (filterValue.length === 0) {
         searchParams.delete(sectionId);
-        console.log("deleted");
       }
-      console.log("includes, ", value, sectionId, filterValue);
     } else {
       filterValue.push(value);
     }
@@ -82,11 +88,11 @@ export default function Product() {
     const searchParams = new URLSearchParams(location.search);
     searchParams.set(sectionId, e.target.value);
     const query = searchParams.toString();
-    navigate({ search: `?${query}` });
+    navigate({ search: `${query}` });
   };
 
   // useEffect(() => {
-  //   dispatch(fetchAllProducts());
+  //   dispatch(fetchAllproductss());
   // }, [dispatch]);
 
   useEffect(() => {
@@ -104,7 +110,7 @@ export default function Product() {
       pageSize: 10,
       stock: stock,
     };
-    console.log("data hai ", data);
+
     dispatch(findProducts(data));
   }, [
     params.levelThree,
@@ -439,11 +445,21 @@ export default function Product() {
               {/* Product grid */}
               <div className="lg:col-span-4 w-full">
                 <div className="flex flex-wrap justify-center bg-white py-5">
-                  {product.products?.content?.map((item) => (
+                  {products?.products?.content?.map((item) => (
                     <ProductCard product={item} />
                   ))}
                 </div>
               </div>
+            </div>
+          </section>
+          <section className="w-full px=[3.6rem]">
+            <div className="px-4 py-5 flex  justify-center">
+              <Pagination
+                count={products?.products?.totalPages}
+                variant="outlined"
+                color="secondary"
+                onChange={handlePaginationChange}
+              />
             </div>
           </section>
         </main>

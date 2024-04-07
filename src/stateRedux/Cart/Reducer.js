@@ -29,7 +29,7 @@ export const cartReducer = (state = initialState, action) => {
         ...state,
         cartItems: [...state.cartItems, action.payload.cartItems],
         loading: false,
-        error:null,
+        error: null,
       };
     case ADD_ITEM_TO_CART_FAILURE:
       return {
@@ -67,20 +67,16 @@ export const cartReducer = (state = initialState, action) => {
     case REMOVE_CART_ITEM_SUCCESS:
       return {
         ...state,
-        cartItems: state.cartItems.filter(
-          (item) => item._id !== action.payload
-        ),
+        deleteCartItem: action.payload,
         loading: false,
-        error:null,
+        error: null,
       };
     case UPDATE_CART_ITEM_SUCCESS:
       return {
         ...state,
-        cartItems: state.cartItems.map((item) =>
-          item._id === action.payload._id ? action.payload : item
-        ),
+        updateCartItem: action.payload,
         loading: false,
-        error:null,
+        error: null,
       };
     case REMOVE_CART_ITEM_FAILURE:
     case UPDATE_CART_ITEM_FAILURE:

@@ -13,9 +13,13 @@ const ProductCard = ({ product }) => {
     discountPercent,
   } = product;
 
+  const handleNavigate = () => {
+    navigate(`/product/${product?._id}`);
+  };
+
   return (
     <div
-      onClick={() => navigate(`/product/${5}`)}
+      onClick={handleNavigate}
       className="productCard w-[15rem] m-3 transition-all cursor-pointer"
     >
       <div className="h-[20rem]">

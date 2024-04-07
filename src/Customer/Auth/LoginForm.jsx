@@ -18,7 +18,6 @@ const LoginForm = () => {
     };
     dispatch(login(userData));
     navigate("/");
-    console.log("userData", userData);
   };
   return (
     <div>

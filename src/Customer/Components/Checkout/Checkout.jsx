@@ -18,7 +18,7 @@ export default function Checkout() {
   const [skipped, setSkipped] = React.useState(new Set());
 
   const step = querySearch.get("step");
-  console.log(step);
+ 
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
